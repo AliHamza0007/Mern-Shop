@@ -1,5 +1,5 @@
 import { TryCatch } from '../middlewares/Error.js';
-import ErrorHandler from '../utils/Utility.class.js';
+import ErrorHandler from '../utils/utility.class.js';
 import { Product } from '../models/ProductModel.js';
 import fs, { rm } from 'fs';
 import { invalidateCache } from '../utils/features.js';
