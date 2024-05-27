@@ -1,5 +1,5 @@
 import { User } from '../models/UserModel.js';
-import ErrorHandler from '../utils/Utility.class.js';
+import ErrorHandler from '../utils/utility.class.js';
 import { TryCatch } from '../middlewares/Error.js';
 import fs from 'fs';
 //  route is /api/v1/user/
