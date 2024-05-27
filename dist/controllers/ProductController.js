@@ -2,7 +2,7 @@ import { TryCatch } from '../middlewares/Error.js';
 import ErrorHandler from '../utils/Utility.class.js';
 import { Product } from '../models/ProductModel.js';
 import fs, { rm } from 'fs';
-import { invalidateCache } from '../utils/Features.js';
+import { invalidateCache } from '../utils/features.js';
 import { myCache } from '../index.js';
 // Route is  /api/v1/product/
 export const getAllProducts = TryCatch(async (req, res, next) => {
@@ -24,7 +24,7 @@ export const getAllProducts = TryCatch(async (req, res, next) => {
         baseQuery.category = category;
     const productsPromise = Product.find(baseQuery)
         .sort(sort && { price: sort === 'asc' ? 1 : -1 })
-        .limit(limit).sort({ createdAt: -1 })
+        .limit(limit)
         .skip(skip);
     const [products, filteredOnlyProduct] = await Promise.all([
         productsPromise,
@@ -138,7 +138,7 @@ export const getAdminProduct = TryCatch(async (req, res, next) => {
     if (myCache.has('all-products'))
         products = JSON.parse(myCache.get('all-products'));
     else {
-        products = await Product.find({}).sort({ createdAt: -1 });
+        products = await Product.find({});
         myCache.set('all-products', JSON.stringify(products));
     }
     products.length !== 0

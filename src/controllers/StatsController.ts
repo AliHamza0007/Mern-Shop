@@ -7,7 +7,7 @@ import {
   calculatePercentage,
   getChartData,
   getInventories,
-} from '../utils/Features.js';
+} from '../utils/features.js';
 
 export const getDashboardStats = TryCatch(async (req, res, next) => {
   let stats = {};

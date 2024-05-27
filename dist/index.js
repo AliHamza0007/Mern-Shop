@@ -7,7 +7,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import Stripe from 'stripe';
 import { errorMiddleware } from './middlewares/Error.js';
-import { ConnectDB } from './utils/Features.js';
+import { ConnectDB } from './utils/features.js';
 // importing Routes
 import UserRoute from './routes/UserRoutes.js';
 import OrderRoute from './routes/OrderRoutes.js';

@@ -3,7 +3,7 @@ import { myCache } from '../index.js';
 import { TryCatch } from '../middlewares/Error.js';
 import { Order } from '../models/OrderModel.js';
 import { OrderType } from '../types/types.js';
-import { invalidateCache, reduceStock } from '../utils/Features.js';
+import { invalidateCache, reduceStock } from '../utils/features.js';
 import ErrorHandler from '../utils/Utility.class.js';
 
 // Route is    /api/v1/order/my?id==0
