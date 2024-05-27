@@ -2,7 +2,7 @@ import { TryCatch } from '../middlewares/Error.js';
 import ErrorHandler from '../utils/Utility.class.js';
 import { Product } from '../models/ProductModel.js';
 import fs, { rm } from 'fs';
-import { invalidateCache } from '../utils/Features.js';
+import { invalidateCache } from '../utils/features.js';
 import { myCache } from '../index.js';
 // Route is  /api/v1/product/
 export const getAllProducts = TryCatch(async (req, res, next) => {
