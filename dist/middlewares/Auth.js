@@ -1,5 +1,5 @@
 import { User } from '../models/UserModel.js';
-import ErrorHandler from '../utils/Utility.class.js';
+import ErrorHandler from '../utils/utility.class.js';
 import { TryCatch } from './Error.js';
 export const IsAdmin = () => TryCatch(async (req, res, next) => {
     const Exist = await User.findById(req.query.id);
